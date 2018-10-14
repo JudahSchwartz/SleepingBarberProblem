@@ -4,7 +4,7 @@ public class Barber extends Thread {
     Queue<Client> waitingRoom;
     private static int numberToDo;
     private static final String numberDoneLock = "lock";
-    private static volatile int numberDone;//I think this should be volatile, but it doesnt break when it isnt. Why not? Is it simply not writing to cache?
+    private static int numberDone;
     public static void setNumberOfClients(int n)
     {
         numberToDo = n;
