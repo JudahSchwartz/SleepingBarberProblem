@@ -2,7 +2,7 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Main {
-    static final int NUMBER_OF_CLIENTS = 10;
+    static final int NUMBER_OF_CLIENTS = 100;
     public static void main(String[] args) {
         Barber.setNumberOfClients(NUMBER_OF_CLIENTS);
         System.out.println("Opening barber shop for the day.");

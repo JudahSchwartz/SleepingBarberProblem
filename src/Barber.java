@@ -23,7 +23,7 @@ public class Barber extends Thread {
     {
         while(numberDone < numberToDo)
         {
-            //System.out.println(getName() + "I'm still running " + numberDone + "and" + numberToDo);
+
             Client client = null;
             synchronized (waitingRoom) {
                 if (waitingRoom.size() > 0) {
@@ -31,7 +31,7 @@ public class Barber extends Thread {
                     System.out.println(getName()+ " cutting hair of " + client.getName());
                 }
             }
-            //dont think I need to check for null
+
             if(client != null)
             {
                 synchronized (client)
@@ -47,8 +47,5 @@ public class Barber extends Thread {
 
         }
         System.out.println(getName() + " has determined there are no more customers to wait for");
-
-
-
     }
 }
