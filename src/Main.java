@@ -3,8 +3,10 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class Main {
     static final int NUMBER_OF_CLIENTS = 100;
+    static final int NUMBER_OF_SEATS = 3;
     public static void main(String[] args) {
         Barber.setNumberOfClients(NUMBER_OF_CLIENTS);
+        Client.setNumberOfSeats(NUMBER_OF_SEATS);
         System.out.println("Opening barber shop for the day.");
         Queue<Client> waitingRoom = new ConcurrentLinkedQueue<>();
         Barber barberOne = new Barber("Barber #1");
@@ -19,6 +21,7 @@ public class Main {
             client.setWaitingRoom(waitingRoom);
             client.start();
         }
+
 
 
 
